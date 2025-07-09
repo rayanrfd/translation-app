@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>En-Dar Translate</title>
+    <link href="/static/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>🇮🇪 ➡️ 🇲🇦 Translator</h1>
+    <div class="container">
+      <form name="translationForm" method="post">
+        <textarea
+          id="sourceLanguage"
+          class="text"
+          name="sourceLanguage"
+        ></textarea>
+        <input type="submit" value="Translate" id="translate-btn" />
+      </form>
+    </div>
+    <div class="container">
+      <label>Result</label>
+      <p id="result" name="result"></p>
+    </div>
+    <script src="static/script.js"></script>
+  </body>
+</html>
