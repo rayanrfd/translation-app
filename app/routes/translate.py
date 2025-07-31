@@ -1,12 +1,12 @@
 from fastapi import APIRouter
-from app.model.translation import SourceLanguage, TargetLanguage
+from app.schemas.translation import Translation
 from app.ai.translate import load_translator
 
-router = APIRouter()
+translate_router = APIRouter()
 
 translator = load_translator()
 
-@router.post("/", response_model=TargetLanguage)
-def translate(source: SourceLanguage):
+@translate_router.post("/")
+def translate(source: Translation):
     translated_text = translator(source.text)[0]["translation_text"]
-    return TargetLanguage(text=translated_text)
+    return 0

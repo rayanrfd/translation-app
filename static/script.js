@@ -18,11 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-
+    console.log(form.elements)
+    // Retrieve form infomations
     const { sourceLanguage } = form.elements;
 
     fetchTranslation(sourceLanguage)
       .then((targetLanguage) => {
+        // Displaying the translation
         const result = document.getElementById("result");
         result.textContent = targetLanguage.text;
       })
