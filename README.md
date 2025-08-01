@@ -1,4 +1,4 @@
-# Translate App
+# Translation App
 
 A FastAPI-based web application for translating English text to Darija (Moroccan Arabic) using fine-tuned machine learning models.
 
