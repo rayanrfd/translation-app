@@ -1,6 +1,6 @@
 FROM python:3.12-slim-bookworm
 
-COPY --from=ghcr.io/astral-sh/uv:0.8.4 /uv /uvx /bin/
+ADD https://astral.sh/uv/0.8.4/install.sh /uv-installer.sh
 
 ADD . /app
 
